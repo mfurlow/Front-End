@@ -1,5 +1,7 @@
 .tmp/
 coverage/
 dist/
+build/
 node_modules/
-package.json
+bower_components/
+*.log
