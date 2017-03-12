@@ -1,0 +1,11 @@
+<div class="tech">
+  <img class="tech-logo" ng-src="{{ $ctrl.tech.EventImageURL }}"/>
+  <h3 class="tech-h3">
+    {{ $ctrl.tech.EventTitle }}
+  </h3>
+  <p>{{ $ctrl.tech.EventStartTime | date: 'hh:mm'}} - {{$ctrl.tech.EventEndTime | date: 'hh:mm'}}</p>
+  <p>{{ $ctrl.tech.EventPrice | currency }}</p>
+  <p>{{ $ctrl.tech.Location.LocationBuildingName }}</p>
+  <p>{{ $ctrl.tech.Location.LocationStreet1 }}</p>
+  <p>{{ $ctrl.tech.Location.LocationCity }}</p>
+</div>
