@@ -81,7 +81,7 @@
       "xo-space/esnext"
     ]
   },
-  "name": "front",
+  "name": "frontend",
   "description": "\"# Front-End\"",
   "version": "1.0.0",
   "main": "gulpfile.js",
