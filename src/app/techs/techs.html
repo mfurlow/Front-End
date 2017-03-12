@@ -1,0 +1,13 @@
+<div class="techs-container">
+  <h2 class="techs-h2">
+    Events for You:
+  </h2>
+  <div class="search">
+    <h3>Find Events</h3> 
+    <input ng-model="$ctrl.query" placeholder="find events" />
+  </div>
+
+  <div class="techs">
+    <fountain-tech ng-repeat="tech in $ctrl.techs | filter:$ctrl.query" tech="tech"></fountain-tech>
+  </div>
+</div>

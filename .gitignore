@@ -1,0 +1,7 @@
+.tmp/
+coverage/
+dist/
+build/
+node_modules/
+bower_components/
+*.log
