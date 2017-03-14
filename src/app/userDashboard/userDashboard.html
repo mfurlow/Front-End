@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="../../style/login.css">
+
+<div class="main-container">
+  <fountain-header></fountain-header>
+  <main class="main">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-3"> 
+            </br></br>
+            <h1>User Dashboard</h1> </br>
+            <uib-tabset active="active">
+                
+                <uib-tab index="0" heading="Current Events">
+                <!-- Saved Events -->
+                <!--<uib-tab index="0" heading="Registered Events" select="getRegisteredEvents()">-->
+                    <br/>
+                    <div ng-repeat="user in $ctrl.userEvents.CURRENT">{{user.EventTitle}}</div>
+                </uib-tab>
+
+                <!-- Past Events -->
+                <uib-tab index="1" heading="Saved Events">
+                    <br/>
+                    <div ng-repeat="user in $ctrl.userEvents.SAVED">{{user.EventTitle}}</div>
+                </uib-tab>
+
+                <!--- Registered Events -->
+                <uib-tab index="2" heading="Past Events">
+                    <br/>
+                    <div ng-repeat="user in $ctrl.userEvents.PAST">{{user.EventTitle}}</div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+       </div> 
+  </main>
+  <fountain-footer></fountain-footer>
+</div>

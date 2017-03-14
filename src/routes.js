@@ -21,6 +21,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('UserInfo', {
       url: '/user/userinfo',
       component: 'eventualUserInfo'
+    })
+    .state('UserDashboard', {
+      url: '/user/userDashboard',
+      component: 'eventualUserDashboard'
     });
 }
 

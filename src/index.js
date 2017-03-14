@@ -4,6 +4,7 @@ import {techsModule} from './app/techs/index';
 import {eventDetailModule} from './app/events/index';
 import {loginModule} from './app/login/index';
 import {userUpdateModule} from './app/userupdate/index';
+import {userDashboardModule} from './app/userDashboard/index';
 import 'angular-ui-router';
 import 'angular-ui-bootstrap';
 
@@ -19,7 +20,7 @@ import './app/index.scss';
 
 angular
   .module('app', [techsModule, eventDetailModule, loginModule, userUpdateModule,
-    'ngCookies', 'ui.router', 'ui.bootstrap'])
+    userDashboardModule, 'ngCookies', 'ui.router', 'ui.bootstrap'])
   .config(routesConfig)
   .component('app', main)
   .component('fountainHeader', header)
