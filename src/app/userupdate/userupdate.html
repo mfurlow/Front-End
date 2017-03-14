@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="../style/login.css"/>
+<link rel-"stylesheet" href="../style/heroic-features.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<div class="row">
+
+  <div class="col-md-7 col-md-offset-4">   
+    <form ng-submit='update()'>
+
+      </br></br>
+        <h2>My Account Info</h2> </br></br></br>
+
+  
+  <div class="col-md-offset-1 col-md-11 text-center">
+    <div class="alert alert-info" ng-show="$ctrl.successMessage">
+        {{$ctrl.successMessage}}
+    </div>    
+
+    <div class="alert alert-danger" ng-show="$ctrl.signUpError">
+        Sign Up Failed ({{$ctrl.signUpError.status}})
+    </div>  
+   </div> 
+    
+
+
+    <div class="col-md-offset-1 col-md-11 text-center">
+        <img class="img-circle img-responsive img-center" ng-src="{{($ctrl.user.UserImageURL) || 
+        'https://cloud.githubusercontent.com/assets/16940480/23888655/774df81a-085f-11e7-964c-94a13f472327.png'}}" alt="user image"
+        style="max-width:44%">
+    </div>
+  
+  
+
+  <div class="form-group">
+    <hr/>
+    
+    <label for="EmailInput">Email address</label>
+    <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter email"
+    ng-model='$ctrl.user.UserEmail'>
+  </div>
+
+  <div class="form-group">
+    <label for="FirstNameInput">First Name</label>
+    <input type="text" class="form-control" id="userFirstName" aria-describedby="userFirstName" placeholder="Enter First name"
+    ng-model="$ctrl.user.UserFirstName">
+  </div>
+
+  <div class="form-group">
+    <label for="LastNameInput">Last Name</label>
+    <input type="text" class="form-control" id="userLastName" aria-describedby="userLastName" placeholder="Enter last name"
+    ng-model="$ctrl.user.UserLastName">
+  </div>
+
+  <div class="form-group">
+    <label for="phoneNumberInput">Phone Number</label>
+    <input type="phoneNumberInput" class="form-control" id="userPhoneNumber" aria-describedby="phoneNumber" placeholder="Enter Phone number"
+    ng-model="$ctrl.user.UserPhoneNumber">
+  </div>
+
+  <div class="form-group">
+    <label for="passsword">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password"
+    ng-model="$ctrl.user.UserHashedPassword">
+  </div>
+
+  <div class="form-group">
+    <label for="userImage">Image Url</label>
+    <input type="text" class="form-control" id="exampleImageURL" aria-describedby="image" 
+    ng-model="$ctrl.user.UserImageURL">
+  </div>
+
+  <div class="col-md-4 text-center">
+    <input class="btn btn-md btn-info btn-block" type="submit" value="Update"  ng-click="$ctrl.updateUser()">
+  </div>
+ </div>
+ </form>
+ </div> 
+ </div>

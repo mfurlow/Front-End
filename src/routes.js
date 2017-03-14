@@ -9,5 +9,18 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/',
       component: 'app'
+    })
+    .state('EventID', {
+      url: '/event/:id',
+      component: 'eventualEvent'
+    })
+    .state('Login', {
+      url: '/login',
+      component: 'eventualLogin'
+    })
+    .state('UserInfo', {
+      url: '/user/userinfo',
+      component: 'eventualUserInfo'
     });
 }
+

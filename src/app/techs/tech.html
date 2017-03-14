@@ -4,10 +4,8 @@
     {{ $ctrl.tech.EventTitle }}
   </h3>
   
-  <p><span>{{ $ctrl.tech.EventStartTime | date: 'shortDate'}}</span> 
-  <p>{{ $ctrl.tech.EventStartTime | date: 'hh:mm'}} </p>
-  <p>{{ $ctrl.tech.EventPrice | currency }}</p>
+  <p><span>{{ $ctrl.tech.EventStartTime | date: 'shortDate'}} - {{ $ctrl.tech.EventStartTime | date: 'hh:mma'}} <span class="price">{{ $ctrl.tech.EventPrice | currency }}</span> </span>
   <p>{{ $ctrl.tech.Location.LocationBuildingName }}</p>
   <p>{{ $ctrl.tech.Location.LocationStreet1 }}</p>
-  <p>{{ $ctrl.tech.Location.LocationCity }}</p>
+  <p>{{ $ctrl.tech.Location.LocationCity }} <button type="button" class="btn btn-info" ui-sref="EventID({id:$ctrl.tech.EventID})">Info</button></p>
 </div>
