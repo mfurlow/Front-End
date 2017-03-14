@@ -6,30 +6,37 @@ integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh
     
         <!-- Heading Row -->
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7 col-md-offset-1">
                 <img class="img-responsive img-rounded" ng-src="{{$ctrl.event.EventImageURL}}" alt="">
             </div>
             <!-- /.col-md-8 -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <br />
                 <h1>{{$ctrl.event.EventTitle}}</h1>
                 <h3>{{$ctrl.event.EventStartTime | date: 'mediumDate' }}</h3>
                 <h3>{{$ctrl.event.EventStartTime | date: 'hh:mma'}} - {{$ctrl.event.EventEndTime | date: 'hh:mma'}}</h3>
-                <p>{{$ctrl.event.EventPrice | currency}}</p>
+                <h3>{{$ctrl.event.EventPrice | currency}}</h3>
                 <p>{{$ctrl.event.Location.LocationBuildingName}}</p>
                 <p>{{$ctrl.event.Location.LocationStreet1}}</p>
                 <p>{{$ctrl.event.Location.LocationCity}}, {{$ctrl.event.Location.State.StateAbbreviation}}</p>
-                <p></p>
                 <div ng-repeat="e in $ctrl.event.EventTypes">
                     <p class="eventType">{{e.EventTypeName}}</p>
                 </div>
-                <a class="btn btn-primary btn-sm" href="#">Join</a>
-                <a class="btn btn-danger btn-sm" href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                <a class="btn btn-primary btn-sm" href="#" ng-click="$ctrl.registerEvent($ctrl.event.EventID)">Join</a>
+                <a class="btn btn-danger btn-sm" href="#"><span class="glyphicon glyphicon-heart" ng-click="$ctrl.favoriteEvent($ctrl.event.EventID)"></span></a>
+                <br /><br />
+                <div class="alert alert-info" ng-show="$ctrl.successMessage">
+                    {{$ctrl.successMessage}}
+                </div>    
+
+                <div class="alert alert-danger" ng-show="$ctrl.errorMessage">
+                    Error with adding event : ({{$ctrl.errorMessage.status}})
+                </div>   
             </div>
             <!-- /.col-md-4 -->
         </div>
         <!-- /.row -->
-        <hr>
+        <hr />
         </div>
         <!-- /.row -->
 
