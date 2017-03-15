@@ -1,10 +1,12 @@
+<div class="user-update">
+
 <div class="row">
 
-  <div class="col-md-7 col-md-offset-4">   
+  <div class="col-md-6 col-md-offset-3">   
     <form ng-submit='update()'>
 
       </br></br>
-        <h2>My Account Info</h2> </br></br></br>
+        <h2>My Account Info</h2> </br>
 
   
   <div class="col-md-offset-1 col-md-11 text-center">
@@ -24,12 +26,10 @@
         'https://cloud.githubusercontent.com/assets/16940480/23888655/774df81a-085f-11e7-964c-94a13f472327.png'}}" alt="user image"
         style="max-width:44%">
     </div>
-  
-  
 
   <div class="form-group">
     <hr/>
-    
+    <br/><br/>
     <label for="EmailInput">Email address</label>
     <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter email"
     ng-model='$ctrl.user.UserEmail'>
@@ -71,4 +71,5 @@
  </div>
  </form>
  </div> 
+ </div>
  </div>

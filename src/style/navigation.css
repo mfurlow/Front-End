@@ -25,11 +25,6 @@
 .navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
     color:#1E88E5;
 }
-
-.navbar-nav {
-   margin: 0 !important;
-}
-
 .navbar.navbar-default {
     background-color: #99ccff;
     border: 0;

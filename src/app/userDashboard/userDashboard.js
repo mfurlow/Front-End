@@ -30,8 +30,8 @@ class UserDashboardController {
       $http.post(registerEventURL, {
         withCredentials: true
       }).then(response => {
+        $state.reload();
         this.user = response.data;
-        this.successMessage = 'Event added to your dashboard';
       }).catch(error => {
         this.errorMessage = error;
       });
@@ -45,8 +45,8 @@ class UserDashboardController {
       $http.delete(dropRegisteredEventURL, {
         withCredentials: true
       }).then(response => {
-        this.user = response.data;
         $state.reload();
+        this.user = response.data;
       }).catch(error => {
         this.errorMessage = error;
       });
