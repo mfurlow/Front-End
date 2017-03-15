@@ -14,7 +14,7 @@ class UserUpdateController {
       method: 'GET'
     }).then(response => {
       this.user = response.data;
-      this.userPassword = userInfo.UserPassword;
+      this.userPassword = null;
     }).catch(error => {
       $location.path('/');
       this.authenticationError = error;
@@ -37,7 +37,11 @@ class UserUpdateController {
         withCredentials: true
       }).then(response => {
         $cookies.put('UserEmail', response.data.UserEmail);
-        $cookies.put('UserPassword', this.user.UserHashedPassword);
+
+        if (this.userPassword !== null) {
+          $cookies.put('UserPassword', this.userPassword);
+        }
+
         $cookies.put('id', response.data.UserID);
         this.successMessage = 'Successfully updated';
       }).catch(error => {
