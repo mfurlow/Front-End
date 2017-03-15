@@ -17,7 +17,7 @@ import {footer} from './app/footer';
 import {nav} from './app/nav';
 import {carouselImages} from './app/carousel';
 
-import './app/index.scss';
+// import './app/index.scss';
 
 angular
   .module('app', [techsModule, eventDetailModule, loginModule, userUpdateModule,
