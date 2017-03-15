@@ -3,7 +3,7 @@
 <div>
     <div uib-carousel active="active" interval="$ctrl.myInterval" no-wrap="$ctrl.noWrapSlides">
       <div uib-slide ng-repeat="carousel in $ctrl.carousels track by carousel.id" index="carousel.id">
-        <img ng-src="{{carousel.image}}" style="margin:auto;">
+        <img class="img-responsive" ng-src="{{carousel.image}}" style="margin:auto;">
         <div class="carousel-caption" style="text-shadow: 2px 4px 3px rgba(0,0,0,0.3);">
           
           <h2>{{carousel.title}}</h2>

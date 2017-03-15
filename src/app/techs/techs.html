@@ -1,14 +1,25 @@
+<link rel='stylesheet' href='../../style/searchbar.scss'/>
 
 <div>
-  <h2 class="techs-h2">
-    Events for You:
+  <br/><br/>
+  <h2 class="techs-h2 text-center">
+    Find an adventure. Find your fun. Find your crowd.
   </h2>
-  <div class="search">
-    <h3>Find Events</h3> 
-    <input ng-model="$ctrl.query" placeholder="find events" />
+  <br/>
+
+  <div class="col-md-8 col-md-offset-1 search text-center">
+    <input class="searchTerm" ng-model="$ctrl.query" placeholder="find events" class="searchButton" type="submit" />
+    <br/><br/><br/>
   </div>
 
+  <form class="search">
+  <input class="searchTerm" placeholder="Enter your search term ..." /><input class="searchButton" type="submit" />
+</form>
+
   <div class="row">
-    <fountain-tech ng-repeat="tech in $ctrl.techs | filter:$ctrl.query" tech="tech"></fountain-tech>
+    <br/>
+      <div class="col-md-10 col-md-offset-1">
+        <fountain-tech ng-repeat="tech in $ctrl.techs | filter:$ctrl.query" tech="tech"></fountain-tech>
+      </div>
   </div>
 </div>
