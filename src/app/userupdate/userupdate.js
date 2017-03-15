@@ -14,6 +14,7 @@ class UserUpdateController {
       method: 'GET'
     }).then(response => {
       this.user = response.data;
+      this.userPassword = userInfo.UserPassword;
     }).catch(error => {
       $location.path('/');
       this.authenticationError = error;
@@ -28,7 +29,7 @@ class UserUpdateController {
         UserFirstName: this.user.UserFirstName,
         UserLastName: this.user.UserLastName,
         UserPhoneNumber: this.user.UserPhoneNumber,
-        UserHashedPassword: this.user.UserHashedPassword,
+        UserHashedPassword: this.userPassword,
         UserImageURL: this.user.UserImageURL
       };
 
