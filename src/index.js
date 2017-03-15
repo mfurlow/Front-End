@@ -18,8 +18,10 @@ import {nav} from './app/nav';
 import {carouselImages} from './app/carousel';
 import {navigation} from './app/navigation';
 
-// import './app/index.scss';
+import './style/main.css';
+
 // this registers all of the components, modules, and libraries to a module
+
 angular
   .module('app', [techsModule, eventDetailModule, loginModule, userUpdateModule,
     userDashboardModule, 'ngCookies', 'ui.router', 'ui.bootstrap'])
