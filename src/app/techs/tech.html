@@ -1,11 +1,25 @@
-<div class="tech">
-  <img class="tech-logo" ng-src="{{ $ctrl.tech.EventImageURL }}"/>
-  <h3 class="tech-h3">
-    {{ $ctrl.tech.EventTitle }}
+
+<link rel="stylesheet" href="../../style/3-col-portfolio.css"></link>
+
+<div class="col-md-4 portfolio-item">
+  <a href="#">
+      <img class="img-responsive tech-logo" ng-src="{{$ctrl.tech.EventImageURL}}" alt="">
+  </a>
+  <h3>
+      <a class="tech-h3" href="/event/{{ $ctrl.tech.EventID}}">{{ $ctrl.tech.EventTitle}}</a>
   </h3>
-  
-  <p><span>{{ $ctrl.tech.EventStartTime | date: 'shortDate'}} - {{ $ctrl.tech.EventStartTime | date: 'hh:mma'}} <span class="price">{{ $ctrl.tech.EventPrice | currency }}</span> </span>
-  <p>{{ $ctrl.tech.Location.LocationBuildingName }}</p>
+  <p>{{ $ctrl.tech.EventStartTime | date: 'mediumDate'}} <small>{{ $ctrl.tech.EventStartTime | date: 'hh:mm a'}} 
+      - {{ $ctrl.tech.EventEndTime | date: 'hh:mm a'}}</small></p>
+  <p>{{ $ctrl.tech.LocationStreet1 }}</p>
   <p>{{ $ctrl.tech.Location.LocationStreet1 }}</p>
-  <p>{{ $ctrl.tech.Location.LocationCity }} <button type="button" class="btn btn-info" ui-sref="EventID({id:$ctrl.tech.EventID})">Info</button></p>
+
+  <div class="row">
+      <div class="col-md-6">
+          <p>{{ $ctrl.tech.LocationCity }}, {{ $ctrl.tech.StateAbbreviation}}</p>
+      </div>
+      <div class="col-md-4 col-md-offset-2">    
+          <a class="btn btn-success btn-sm" href="#"><span class="glyphicon glyphicon-plus" ng-click="$ctrl.registerEvent(userEvent.EventID)"></span></a>
+          <a class="btn btn-danger btn-sm" href="#"><span class="glyphicon glyphicon-trash" ng-click="$ctrl.deleteSavedEvent(userEvent.EventID)"></span></a>
+      </div>    
+  </div>
 </div>

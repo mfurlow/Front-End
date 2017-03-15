@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "key": "Color_Run",
+    "title": "Color Run",
+    "image": "https://cloud.githubusercontent.com/assets/16940480/23928529/983c1e0c-08f6-11e7-96b8-afdeffdebcee.jpg",
+    "text": "Find an adventure"
+  },
+  {
+    "id": 1,
+    "key": "Bike_Polo",
+    "title": "Bike Polo",
+    "image": "https://cloud.githubusercontent.com/assets/16940480/23928928/1cebc380-08f9-11e7-8b3e-2abebef5ead3.jpg",
+    "text": "Find your fun"  
+  },
+  {
+    "id": 2,
+    "key": "Afro_Punk",
+    "title": "Afro Punk",
+    "image": "https://cloud.githubusercontent.com/assets/16940480/23928539/a710bfaa-08f6-11e7-879f-462005720df9.jpg",
+    "text": "Find your crowd"
+  }
+]

@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
 integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="../../style/login.css"></link>
 <link rel="stylesheet" href="../../style/3-col-portfolio.css"></link>
 
 <div class="main-container">
@@ -26,7 +25,7 @@ integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh
                 
                 <uib-tab index="0" heading="Current Events">
                 <!-- Saved Events -->
-                <!--<uib-tab index="0" heading="Registered Events" select="getRegisteredEvents()">-->
+                <uib-tab index="0" heading="Registered Events" select="getRegisteredEvents()">
                     <br/><br/>
                     <div ng-repeat="userEvent in $ctrl.userEvents.CURRENT">
                         <div class="col-md-4 portfolio-item">

@@ -15,6 +15,7 @@ import {header} from './app/header';
 import {title} from './app/title';
 import {footer} from './app/footer';
 import {nav} from './app/nav';
+import {carouselImages} from './app/carousel';
 
 import './app/index.scss';
 
@@ -26,4 +27,5 @@ angular
   .component('fountainHeader', header)
   .component('fountainTitle', title)
   .component('fountainFooter', footer)
-  .component('fountainNav', nav);
+  .component('fountainNav', nav)
+  .component('fountainCarousel', carouselImages);

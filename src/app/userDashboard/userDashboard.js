@@ -2,6 +2,7 @@
 class UserDashboardController {
   /** @ngInject */
 
+// need to re-add $state, $location,$cookies
   constructor($http, $cookies, $location, $state) {
     const user = {
       UserEmail: $cookies.get('UserEmail'),
@@ -10,6 +11,7 @@ class UserDashboardController {
     };
     const userEventsUrl = 'http://localhost:52784/api/users/getusersevents/' +
       user.UserID + '/' + user.UserEmail + '/' + user.UserPassword + '/';
+    // const demoUrl = 'http://localhost:52784/api/users/getusersevents/500000023/sashafierce@gmail.com/secret';
     $http({
       url: userEventsUrl,
       method: 'GET'

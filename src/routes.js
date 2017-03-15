@@ -23,7 +23,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       component: 'eventualUserInfo'
     })
     .state('UserDashboard', {
-      url: '/user/userDashboard',
+      url: '/user/userdashboard',
       component: 'eventualUserDashboard'
     });
 }
