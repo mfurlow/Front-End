@@ -16,9 +16,10 @@ import {title} from './app/title';
 import {footer} from './app/footer';
 import {nav} from './app/nav';
 import {carouselImages} from './app/carousel';
+import {navigation} from './app/navigation';
 
 // import './app/index.scss';
-
+// this registers all of the components, modules, and libraries to a module
 angular
   .module('app', [techsModule, eventDetailModule, loginModule, userUpdateModule,
     userDashboardModule, 'ngCookies', 'ui.router', 'ui.bootstrap'])
@@ -28,4 +29,5 @@ angular
   .component('fountainTitle', title)
   .component('fountainFooter', footer)
   .component('fountainNav', nav)
-  .component('fountainCarousel', carouselImages);
+  .component('fountainCarousel', carouselImages)
+  .component('fountainNavigation', navigation);
