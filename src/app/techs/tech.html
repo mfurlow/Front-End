@@ -10,16 +10,16 @@
   </h3>
   <p>{{ $ctrl.tech.EventStartTime | date: 'mediumDate'}} <small>{{ $ctrl.tech.EventStartTime | date: 'hh:mm a'}} 
       - {{ $ctrl.tech.EventEndTime | date: 'hh:mm a'}}</small></p>
-  <p>{{ $ctrl.tech.LocationStreet1 }}</p>
+  <p>{{ $ctrl.tech.Location.BuildingName }}</p>
   <p>{{ $ctrl.tech.Location.LocationStreet1 }}</p>
+  <p>{{$ctrl.event.Location.LocationCity}}, {{$ctrl.event.Location.State.StateAbbreviation}}</p>
 
   <div class="row">
       <div class="col-md-6">
           <p>{{ $ctrl.tech.LocationCity }}, {{ $ctrl.tech.StateAbbreviation}}</p>
       </div>
       <div class="col-md-4 col-md-offset-2">    
-          <a class="btn btn-success btn-sm" href="#"><span class="glyphicon glyphicon-plus" ng-click="$ctrl.registerEvent(userEvent.EventID)"></span></a>
-          <a class="btn btn-danger btn-sm" href="#"><span class="glyphicon glyphicon-trash" ng-click="$ctrl.deleteSavedEvent(userEvent.EventID)"></span></a>
+          <a class="btn btn-info btn-md" href="/event/{{ $ctrl.tech.EventID}}">More Info</a>
       </div>    
   </div>
 </div>
