@@ -6,10 +6,10 @@
     <form ng-submit='update()'>
 
       </br></br>
-        <h2>My Account Info</h2> </br>
+        <h2 class="text-center">My Account Info</h2> </br>
 
   
-  <div class="col-md-offset-1 col-md-11 text-center">
+  <div class="text-center">
     <div class="alert alert-info" ng-show="$ctrl.successMessage">
         {{$ctrl.successMessage}}
     </div>    
@@ -21,7 +21,7 @@
     
 
 
-    <div class="col-md-offset-1 col-md-11 text-center">
+    <div class="col-md-offset-5 col-md-7">
         <img class="img-circle img-responsive img-center" ng-src="{{($ctrl.user.UserImageURL) || 
         'https://cloud.githubusercontent.com/assets/16940480/23970735/59fbd3fc-09a1-11e7-818c-c78cc15c75b3.png'}}" alt="user image"
         style="max-width:44%">
@@ -33,6 +33,12 @@
     <label for="EmailInput">Email address</label>
     <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter email"
     ng-model='$ctrl.user.UserEmail'>
+  </div>
+
+  <div class="form-group">
+    <label for="passsword">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password"
+    ng-model="$ctrl.userPassword">
   </div>
 
   <div class="form-group">
@@ -54,12 +60,6 @@
   </div>
 
   <div class="form-group">
-    <label for="passsword">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password"
-    ng-model="$ctrl.userPassword">
-  </div>
-
-  <div class="form-group">
     <label for="userImage">Image Url</label>
     <input type="text" class="form-control" id="exampleImageURL" aria-describedby="image" 
     ng-model="$ctrl.user.UserImageURL">
@@ -68,6 +68,8 @@
   <div class="col-md-4 text-center">
     <input class="btn btn-md btn-info btn-block" type="submit" value="Update"  ng-click="$ctrl.updateUser()">
   </div>
+
+  <br /><br /><br />
  </div>
  </form>
  </div> 
