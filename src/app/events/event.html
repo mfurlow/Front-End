@@ -1,52 +1,55 @@
+<link rel="stylesheet" href="../../style/shop-item.css"></link>
+
+
 <div class="events-container">
-    
-        <!-- Heading Row -->
-        <div class="row">
-            <div class="col-md-7 col-md-offset-1">
-                <img class="img-responsive img-rounded" ng-src="{{$ctrl.event.EventImageURL}}" alt="">
-            </div>
-            <!-- /.col-md-8 -->
-            <div class="col-md-3">
-                <br />
-                <h1>{{$ctrl.event.EventTitle}}</h1>
+
+<div class="row">
+
+        <div class="col-md-3">
+            <div class="panel panel-info">
+            <div class="panel-heading">Event Info</div>
+            <div class="panel-body">
+                <h2>{{$ctrl.event.EventTitle}}</h2>
                 <h3>{{$ctrl.event.EventStartTime | date: 'mediumDate' }}</h3>
                 <h3>{{$ctrl.event.EventStartTime | date: 'hh:mma'}} - {{$ctrl.event.EventEndTime | date: 'hh:mma'}}</h3>
-                <h3>{{$ctrl.event.EventPrice | currency}}</h3>
                 <p>{{$ctrl.event.Location.LocationBuildingName}}</p>
                 <p>{{$ctrl.event.Location.LocationStreet1}}</p>
                 <p>{{$ctrl.event.Location.LocationCity}}, {{$ctrl.event.Location.State.StateAbbreviation}}</p>
+                
                 <div ng-repeat="e in $ctrl.event.EventTypes">
                     <p class="eventType">{{e.EventTypeName}}</p>
                 </div>
-                <a class="btn btn-primary btn-sm" href="#" ng-click="$ctrl.registerEvent($ctrl.event.EventID)">Join</a>
-                <a class="btn btn-danger btn-sm" href="#"><span class="glyphicon glyphicon-heart" ng-click="$ctrl.favoriteEvent($ctrl.event.EventID)"></span></a>
-                <br /><br />
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <a class="btn btn-primary btn-md" href="#" ng-click="$ctrl.registerEvent($ctrl.event.EventID)">Join</a>
+                        <a class="btn btn-danger btn-md" href="#"><span class="glyphicon glyphicon-heart" ng-click="$ctrl.favoriteEvent($ctrl.event.EventID)"></span></a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <br />
                 <div class="alert alert-info" ng-show="$ctrl.successMessage">
                     {{$ctrl.successMessage}}
                 </div>    
 
                 <div class="alert alert-danger" ng-show="$ctrl.errorMessage">
                     Error with adding event : ({{$ctrl.errorMessage.status}})
-                </div>   
-            </div>
-            <!-- /.col-md-4 -->
+                </div> 
         </div>
-        <!-- /.row -->
-        <hr />
-        <!-- /.row -->
+<div class="col-md-8">
 
-        <!-- Content Row -->
-        <div class="row">
-            <div class="col-md-offset-1 col-md-6">
-                <h2>More Information</h2>
-                <h3>{{$ctrl.event.EventDescription}}</h3>
+            <div class="thumbnail">
+                <img class="img-responsive" ng-src="{{$ctrl.event.EventImageURL}}" alt="">
+                <div class="caption-full">
+                    <h4 class="pull-right">{{$ctrl.event.EventPrice | currency}}</h4>
+                    <h4><a href="#">{{$ctrl.event.EventTitle}}</a>
+                    </h4>
+    
+                   
+                    <h3>{{$ctrl.event.EventDescription}}</h3>
+                </div>
+                </div>
             </div>
-            <!-- /.col-md-4 -->
-            <div class="col-md-offset-1 col-md-3">
-                <h2>Location</h2>
-                <h3>//TODO</h3>
-            </div>
-        </div>
-        <br />
-    </div>
+</div>
 

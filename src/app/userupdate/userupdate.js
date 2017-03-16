@@ -1,13 +1,8 @@
 class UserUpdateController {
   /** @ngInject */
   constructor($http, $cookies, $location) {
-    const userInfo = {
-      UserEmail: $cookies.get('UserEmail'),
-      UserPassword: $cookies.get('UserPassword'),
-      UserID: ($cookies.get('id') + '/')
-    };
-    const getUserUrl = 'http://localhost:52784/api/users/getuser/' + userInfo.UserID +
-      '/' + userInfo.UserPassword + '/' + userInfo.UserEmail + '/';
+    const getUserUrl = 'http://localhost:52784/api/users/getuser/' + $cookies.get('id') +
+      '/' + $cookies.get('UserPassword') + '/' + $cookies.get('UserEmail') + '/';
 
     $http({
       url: getUserUrl,
@@ -21,8 +16,8 @@ class UserUpdateController {
     });
 
     this.updateUser = function () {
-      const updateUserUrl = 'http://localhost:52784/api/users/putuser/' + userInfo.UserID +
-        '/' + userInfo.UserEmail + '/' + userInfo.UserPassword + '/';
+      const updateUserUrl = 'http://localhost:52784/api/users/putuser/' + $cookies.get('id') +
+        '/' + $cookies.get('UserEmail') + '/' + $cookies.get('UserPassword') + '/';
 
       const user = {
         UserEmail: this.user.UserEmail,
